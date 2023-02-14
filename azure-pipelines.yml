@@ -21,9 +21,11 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-      displayName: Build an image
+      displayName: Run tests and start EAS build
       inputs:
         command: build
-        dockerfile: '**/Dockerfile'
+        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+        arguments: --build-arg EXPO_TOKEN=$(EXPO_TOKEN)
+    
