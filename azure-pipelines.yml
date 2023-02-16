@@ -28,4 +28,3 @@ stages:
         tags: |
           $(tag)
         arguments: --build-arg EXPO_TOKEN=$(EXPO_TOKEN)
-    
