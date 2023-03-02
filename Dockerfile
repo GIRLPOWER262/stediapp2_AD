@@ -2,8 +2,7 @@
 
 FROM node:16.15.0 as build
 
-ARG EXPO_TOKEN
-ENV EXPO_TOKEN $EXPO_TOKEN
+ENV EXPO_TOKEN $e0TJNfJfNKPp8dvH9i1vGkY7CPtlOfp8F3k5dwMB
 RUN echo "EXPO Token: " $EXPO_TOKEN 
 
 WORKDIR /app
@@ -17,4 +16,3 @@ RUN npm run test
 RUN npm install eas-cli --global
 RUN npx eas-cli build --profile preview --platform android --non-interactive
 
-# commentss
