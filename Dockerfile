@@ -17,4 +17,3 @@ RUN npm run test
 RUN npm install eas-cli --global
 RUN npx eas-cli build --profile preview --platform android --non-interactive
 
-# commentss
